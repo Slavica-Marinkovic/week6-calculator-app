@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <title>Calculator App</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="top">
+      <div class="calc">
+        <h1>calc</h1>
+      </div>
+      <div class="theme">
+        <div>
+          <p>theme</p>
+        </div>
+        <div class="btns">
+          <div class="numbers-for-btn">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+          </div>
+          <div class="btn-container">
+            <div class="btn-theme first-theme"></div>
+            <div class="btn-theme second-theme"></div>
+            <div class="btn-theme third-theme"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--div top end-->
+    <div class="screen">
+      <form name="calculator">
+        <input type="text" name="text" id="input-text" disabled="disabled">
+      </form>
+    </div>
+    <!--div screen end-->
+    <div class="keyboard">
+      <button class="btn num">7</button>
+      <button class="btn num">8</button>
+      <button class="btn num">9</button>
+      <button class="btn btn-del">DEL</button>
+
+      <button class="btn num">4</button>
+      <button class="btn num">5</button>
+      <button class="btn num">6</button>
+      <button class="btn btn-operator">+</button>
+
+      <button class="btn num">1</button>
+      <button class="btn num">2</button>
+      <button class="btn num">3</button>
+      <button class="btn btn-operator">-</button>
+
+      <button class="btn num">.</button>
+      <button class="btn num">0</button>
+      <button class="btn btn-operator">/</button>
+      <button class="btn btn-operator">x</button>
+
+      <button class="btn btn-reset">RESET</button>
+      <button class="btn btn-calculate">=</button>
+    </div>
+    <!-- div keyboard end-->
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
