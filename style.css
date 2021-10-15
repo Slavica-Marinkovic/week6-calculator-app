@@ -1,0 +1,248 @@
+.theme1 {
+    --main-bg:hsl(222, 26%, 31%);
+    --keyboard-bg:hsl(223, 31%, 20%);
+    --screen-bg: hsl(224, 36%, 15%);
+    --del-reset-bg:hsl(225, 21%, 49%);
+    --del-reset-shadow:hsl(224, 28%, 35%);
+    --equally-key-btn-bg: hsl(6, 63%, 50%);
+    --equally-key-shadow: hsl(6, 70%, 34%);
+    --main-bg-key: hsl(30, 25%, 89%);
+    --main-bg-key-shadow: hsl(28, 16%, 65%);
+    --text-color: hsl(0, 0%, 100%);
+    --text-number-color: hsl(221, 14%, 31%);
+    --text-del-reset: hsl(0, 0%, 100%);
+    --text-equally: hsl(0, 0%, 100%);
+    --main-bg-key-hover: hsl(60, 100%, 100%);
+    --del-reset-bg-hover:hsl(225, 51%, 76%);
+    --equally-key-btn-bg-hover:hsl(6, 93%, 67%);
+}
+.theme2 {
+    --main-bg: hsl(0, 0%, 90%);
+    --keyboard-bg: hsl(0, 5%, 81%);
+    --screen-bg: hsl(0, 0%, 93%);
+    --del-reset-bg: hsl(185, 42%, 37%);
+    --del-reset-shadow: hsl(185, 58%, 25%);
+    --equally-key-btn-bg: hsl(25, 98%, 40%);
+    --equally-key-shadow: hsl(25, 99%, 27%);
+    --main-bg-key: hsl(45, 7%, 89%);
+    --main-bg-key-shadow: hsl(35, 11%, 61%);
+    --text-color: hsl(60, 10%, 19%);
+    --text-number-color: hsl(60, 10%, 19%);
+    --text-del-reset: hsl(0, 0%, 100%);
+    --text-equally: hsl(0, 0%, 100%);
+    --main-bg-key-hover: hsl(0, 0%, 100%);
+    --del-reset-bg-hover: hsl(185, 40%, 56%);
+    --equally-key-btn-bg-hover: hsl(25, 100%, 61%);
+}
+.theme3 {
+    --main-bg: hsl(268, 75%, 9%);
+    --keyboard-bg: hsl(268, 71%, 12%);
+    --screen-bg: hsl(268, 71%, 12%);
+    --del-reset-bg: hsl(281, 89%, 26%);
+    --del-reset-shadow: hsl(285, 91%, 52%);
+    --equally-key-btn-bg: hsl(176, 100%, 44%);
+    --equally-key-shadow: hsl(177, 92%, 70%);
+    --main-bg-key: hsl(268, 47%, 21%);
+    --main-bg-key-shadow: hsl(290, 70%, 36%);
+    --text-color: hsl(52, 100%, 62%);
+    --text-number-color: hsl(52, 100%, 62%);
+    --text-del-reset: hsl(0, 0%, 100%);
+    --text-equally: hsl(198, 20%, 13%);
+    --main-bg-key-hover: hsl(268, 54%, 44%);
+    --del-reset-bg-hover: hsl(280, 56%, 44%);
+    --equally-key-btn-bg-hover: hsl(176, 100%, 79%);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family:'Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--main-bg);
+}
+.wrapper {
+    max-width: 540px;
+    margin: 30px 0;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+.calc h1 {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: -0.53px;
+    color: var(--text-color);
+}
+.theme p {
+    margin: 0 21px 5px 0;
+}
+.theme p, .numbers-for-btn span {
+    font-size: 12px;
+    line-height: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+.theme {
+    display: flex;
+    align-items: flex-end;
+}
+.numbers-for-btn {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+}
+.btn-theme:hover {
+   background-color: var(--equally-key-btn-bg-hover);
+cursor: pointer;
+}
+.btn-container {
+    background-color: var(--keyboard-bg);
+    border-radius: 13px;
+    width: 71px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.btn-theme {
+    background-color: var(--equally-key-btn-bg);
+    border: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    transition: all 0.4s ease;
+}
+
+.screen {
+    background-color: var(--screen-bg);
+    padding: 38px 32px 36px 0;
+    margin-top: 32px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+}
+.screen input {
+    width: 100%;
+    outline: none;
+    text-align: right;
+    font-family:'Spartan', sans-serif;
+    color: var(--text-color);
+    font-size: 48px;
+    line-height: 54px;
+    letter-spacing: -0.8px;
+    font-weight: 700;
+    background-color: var(--screen-bg);
+    border: none;
+}
+.keyboard {
+    height: 480px;
+    background-color: var(--keyboard-bg);
+    border-radius: 10px;
+    padding: 32px;
+    display: grid;
+    grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+    column-gap: 25px;
+    row-gap: 24px;
+}
+.btn {
+    border-radius: 10px;
+    border: none;
+    font-size: 32px;
+    font-family:'Spartan', sans-serif;
+    line-height: 36px;
+    letter-spacing: -0.53px;
+    text-align: center;
+    color: var(--text-number-color);
+    padding: 10px 13px 14px 14px;
+    background-color: var(--main-bg-key);
+    box-shadow: 0 4px 0 var(--main-bg-key-shadow);
+    outline: none;
+}
+.btn:active{
+    transform: translateY(4px);
+    box-shadow: 0px 3px 0px var(--main-bg-key-shadow);
+}
+.btn:hover {
+    cursor: pointer;
+    background-color: var(--main-bg-key-hover);
+}
+.btn-del, .btn-reset, .btn-calculate {
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: -0.33px;
+}
+.btn-del, .btn-reset{
+    background-color: var(--del-reset-bg);
+    color: var(--text-color);
+    box-shadow: 0 4px 0 var(--del-reset-shadow);
+}
+.btn-del {
+    padding: 11px 13px 13px 14px;
+}
+.btn-del:hover {
+    background-color: var(--del-reset-bg-hover);
+}
+.btn-reset {
+  grid-column: 1 / span 2;
+  padding: 11px 29px 13px 32px;
+}
+.btn-reset:hover {
+    background-color: var(--del-reset-bg-hover);
+}
+.btn-calculate {
+    background-color: var(--equally-key-btn-bg);
+    color: var(--text-equally);
+    box-shadow: 0 4px 0 var(--equally-key-shadow);
+    grid-column: 3 / span 2;
+    padding: 11px 29px 13px 32px;
+}
+.btn-calculate:hover {
+    background-color: var(--equally-key-btn-bg-hover);
+}
+@media  screen and (max-width: 580px) {
+    .wrapper {
+        margin: 28px 24px 31px 24px;
+    }
+    .screen {
+        padding: 25px 24px 25px 0;
+    }
+    .screen input {
+        font-size: 32px;
+        line-height: 36px;
+    }
+    .btn {
+        font-size: 28px;
+        line-height: 31px;
+        padding: 10px 10px 14px 10px;
+        border-radius: 5px;
+        max-height: 60px;
+    }
+    .keyboard {
+        column-gap: 13px;
+        row-gap: 13px;
+        padding: 24px;
+        height: 420px;
+    }
+    .btn-del {
+        padding: 9px 10px 15px 10px;
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: -0.27px;
+    }
+    .btn-reset, .btn-calculate{
+        padding: 9px 22px 15px 22px;
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: -0.27px;
+    }
+    
+}
